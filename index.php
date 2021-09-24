@@ -2,10 +2,11 @@
 
 session_start();
 
+// 
 if(isset($_GET['logout'])){    
 	
 	//Simple exit message
-    $logout_message = "<div class='msgln'><span class='left-info'>User <b class='user-name-left'>". $_SESSION['name'] ."</b> has left the chat session.</span><br></div>";
+    $logout_message = "<div class='msgln'><span class='left-info'>User <b class='user-name-left'>". $_SESSION['name'] ."</b> has betrayed the chat session.</span><br></div>";
     file_put_contents("log.html", $logout_message, FILE_APPEND | LOCK_EX);
 	
 	session_destroy();
@@ -39,9 +40,8 @@ function loginForm(){
 <html lang="en">
     <head>
         <meta charset="utf-8" />
-
-        <title>Tuts+ Chat Application</title>
-        <meta name="description" content="Tuts+ Chat Application" />
+        <title>Labyrinth</title>
+        <meta name="description" content="Daedalus Chat Application" />
         <link rel="stylesheet" href="style.css" />
     </head>
     <body>
@@ -62,6 +62,9 @@ function loginForm(){
             if(file_exists("log.html") && filesize("log.html") > 0){
                 $contents = file_get_contents("log.html");          
                 echo $contents;
+            }
+            else {
+                echo "What should it show without log.html??";
             }
             ?>
             </div>
