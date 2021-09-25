@@ -6,7 +6,7 @@
 body {
   background-image: url("stars.jpeg");
   background-position: center;
-  background-repeat: no-repeat;
+  background-repeat: repeat;
   background-size: 110%;
   margin: 20px auto;
   font-family: Lato;
@@ -34,19 +34,15 @@ a {
   text-decoration: none;
 }
 
-a:hover {
-  text-decoration: underline;
-}
-
 #wrapper,
 #loginform {
   margin: 0 auto;
   padding-bottom: 25px;
   background: #eee;
-  width: 600px;
+  width: 900px;
   max-width: 100%;
   border: 2px solid #212121;
-  border-radius: 4px;
+  border-radius: 10px;
 }
 
 #loginform {
@@ -63,12 +59,11 @@ a:hover {
 #chatbox {
   text-align: left;
   margin: 0 auto;
-  margin-bottom: 25px;
+  margin-bottom: 15px;
   padding: 10px;
   background: rgb(255, 255, 255); /* chat box background color */
-
-  height: 300px;
-  width: 530px;
+  height: 480px;
+  width: 780px;
   border: 1px solid #a7a7a7;
   overflow: auto;
   border-radius: 4px;
@@ -76,12 +71,18 @@ a:hover {
 }
 
 #usermsg {
-  flex: 1;
   border-radius: 4px;
   border: 1px solid #00ffaada; /* USER TEXT BOX BORDER COLOR */
-  -webkit-box-shadow: inset 0 0 15px #000011;
-  -moz-box-shadow: inset 0 0 15px #000011;
-  box-shadow: inset 0 0 10px #000011;
+  -webkit-box-shadow: inset 0 0 10px #000011;
+  -moz-box-shadow: inset 0 0 10px #000011;
+  box-shadow: inset 0 0 7px #000011;
+  padding-left: 10px;
+  width: 727px;
+  height: 30px;
+}
+
+#usermsg:hover {
+  border: 1px solid #000000da; /* USER TEXT BOX BORDER COLOR */
 }
 
 #name {
@@ -95,12 +96,16 @@ a:hover {
 
 #submitmsg,
 #enter {
-  background: #ff00ff; /* send button background */
-  border: 2px solid #ff00f2; /* border for send button */
+  background: #2e967f; /* send button background */
+  border: 2px solid #378ba0; /* border for send button */
   color: white;
   padding: 4px 10px;
   font-weight: bold;
   border-radius: 4px;
+}
+
+#submitmsg:hover {
+  background-color: rgb(33, 87, 76); /* USER TEXT BOX BORDER COLOR */
 }
 
 .error {
@@ -114,14 +119,22 @@ a:hover {
 
 #menu p.welcome {
   flex: 1;
+  font-family: "Brush Script MT";
+  font-size: 30px;
 }
 
-a#exit {
+#exit {
   color: rgb(255, 255, 255); /* text inside of exit button box */
-  background: #be1818; /* exit button color */
-  padding: 6px 10px;
+  background: rgb(48, 92, 236); /* exit button color */
+  padding: 7px 10px;
+  padding-top: 9px;
   border-radius: 4px;
   font-weight: bold;
+}
+
+#exit:hover {
+  /* text-decoration: underline; */
+  background: #1b2f9e;
 }
 
 .msgln {
@@ -129,7 +142,8 @@ a#exit {
 }
 
 .msgln span.left-info {
-  color: rgb(255, 94, 0); /* TEXT COLOR FOR "USER HAS LEFT" */
+  color: rgb(255, 0, 0); /* TEXT COLOR FOR "USER HAS LEFT" */
+  font-weight: bold;
 }
 
 .msgln span.chat-time {
@@ -150,12 +164,13 @@ a#exit {
 }
 
 .msgln b.user-name-left {
-  background: rgb(211, 48, 20); /* "USER HAS LEFT" Name Box color */
+  background: #546e7a; /* "USER HAS LEFT" Name Box color */
 }
 
 #info {
   font-family: "Brush Script MT";
   font-size: 60px;
+  padding-top: 200px;
   text-align: center;
-  color: forestgreen;
+  color: rgb(76, 22, 202);
 }

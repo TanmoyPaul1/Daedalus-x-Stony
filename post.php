@@ -1,6 +1,6 @@
 <?php
 session_start();
-
+date_default_timezone_set('America/New_York');
 if(isset($_SESSION['name'])){
     $text = $_POST['text'];
 	

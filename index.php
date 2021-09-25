@@ -41,7 +41,7 @@ function loginForm(){
 <html lang="en">
     <head>
         <meta charset="utf-8" />
-        <title>Labyrinth</title>
+        <title>kouventa</title>
         <meta name="description" content="Daedalus Chat Application" />
         <link rel="stylesheet" href="style.css" />
     </head>
@@ -55,14 +55,14 @@ function loginForm(){
         <div id="wrapper">
             <div id="menu">
                 <p class="welcome">Welcome, <b><?php echo $_SESSION['name']; ?></b></p>
-                <p class="logout"><a id="exit" href="#">Exit Chat</a></p>
+                <p class="logout"><div id="exit" href="#">Exit Chat</div></p>
             </div>
 
             <div id="chatbox">
             <?php
             if(file_exists("log.html") && filesize("log.html") > 0){
                 $contents = file_get_contents("log.html");       
-                echo "<span id=\"info\">Welcome to Labyrinth!!</span>";
+                echo "<p id=\"info\">Welcome to kouventa!!</p>";
             }
             else {
                 echo "What should it show without log.html??";
@@ -71,7 +71,7 @@ function loginForm(){
             </div>
 
             <form name="message" action="">
-                <input name="usermsg" type="text" id="usermsg" />
+                <input name="usermsg" type="text" id="usermsg"  placeholder="<?php echo $_SESSION['name'] . ' what would you like to say?';?>"/>
                 <input name="submitmsg" type="submit" id="submitmsg" value="Send" />
             </form>
         </div>
