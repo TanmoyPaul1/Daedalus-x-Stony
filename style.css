@@ -4,13 +4,30 @@
 }
 
 body {
-  background-image: url("stars.jpeg");
+  background-image: url("images/stars.jpeg");
   background-position: center;
   background-repeat: repeat;
   background-size: 110%;
   margin: 20px auto;
   font-family: Lato;
   font-weight: 300;
+}
+
+h2 {
+  font-size: 60px;
+}
+
+button {
+  color: white;
+  background-color: #000011;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  
 }
 
 form {

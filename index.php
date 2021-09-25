@@ -16,7 +16,7 @@ if(isset($_POST['enter'])){
 if(isset($_GET['logout'])){    
     
     //Simple exit message
-    $logout_message = "\r\n<div class='msgln'><span class='left-info'>User <b class='user-name-left'>". $_SESSION['name'] ."</b> has betrayed the chat session.</span><br></div>";
+    $logout_message = "\r\n<div class='msgln'><span class='left-info'>User <b class='user-name-left'>". $_SESSION['name'] ."</b> has betrayed the brotherhood.</span><br></div>";
     file_put_contents("log.html", $logout_message, FILE_APPEND | LOCK_EX);
     
     session_destroy();
@@ -26,13 +26,17 @@ if(isset($_GET['logout'])){
 function loginForm(){
     echo 
     '<div id="loginform">
+    <h2>SBU Hackathon 2021</h2>
     <p>Please enter your name to continue!</p>
     <form action="index.php" method="post">
-      <label for="name">Name &mdash;</label>
-      <input type="text" name="name" id="name" />
-      <input type="submit" name="enter" id="enter" value="Enter" />
+        <label for="name">Name &mdash;</label>
+        <input type="text" name="name" id="name" />
+        <input type="submit" name="enter" id="enter" value="Enter" />
     </form>
-  </div>';
+    <br />
+    <img src="images/homeImage.png" style="width:98%"/>
+    <p>Try out your own chat room!</p> 
+    </div>';
 }
 
 ?>
@@ -41,7 +45,7 @@ function loginForm(){
 <html lang="en">
     <head>
         <meta charset="utf-8" />
-        <title>kouventa</title>
+        <title>Kouventa</title>
         <meta name="description" content="Daedalus Chat Application" />
         <link rel="stylesheet" href="style.css" />
     </head>
@@ -107,7 +111,7 @@ function loginForm(){
                     });
                 }
 
-                setInterval (loadLog, 2500);
+                setInterval (loadLog, 1500);
 
                 $("#exit").click(function () {
                     var exit = confirm("Are you sure you want to end the session?");
