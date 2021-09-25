@@ -4,6 +4,10 @@
 }
 
 body {
+  background-image: url("stars.jpeg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 110%;
   margin: 20px auto;
   font-family: Lato;
   font-weight: 300;
@@ -39,9 +43,7 @@ a:hover {
   margin: 0 auto;
   padding-bottom: 25px;
   background: #eee;
-  background-image: url("HomeScreen.jpeg");
-  width: 1000px;
-  height: 600px;
+  width: 600px;
   max-width: 100%;
   border: 2px solid #212121;
   border-radius: 4px;
@@ -63,7 +65,7 @@ a:hover {
   margin: 0 auto;
   margin-bottom: 25px;
   padding: 10px;
-  background: rgb(232, 168, 238); /* chat box background color */
+  background: rgb(255, 255, 255); /* chat box background color */
 
   height: 300px;
   width: 530px;
@@ -76,19 +78,25 @@ a:hover {
 #usermsg {
   flex: 1;
   border-radius: 4px;
-  border: 1px solid #ff4902da;
+  border: 1px solid #00ffaada; /* USER TEXT BOX BORDER COLOR */
+  -webkit-box-shadow: inset 0 0 15px #000011;
+  -moz-box-shadow: inset 0 0 15px #000011;
+  box-shadow: inset 0 0 10px #000011;
 }
 
 #name {
   border-radius: 4px;
-  border: 1px solid #ff9800;
+  border: 1px solid #00ffaada; /* TEXT BOX BORDER COLOR FOR NAME */
+  -webkit-box-shadow: inset 0 0 15px #000011;
+  -moz-box-shadow: inset 0 0 15px #000011;
+  box-shadow: inset 0 0 10px #000011;
   padding: 2px 8px;
 }
 
 #submitmsg,
 #enter {
-  background: #ff9800;
-  border: 2px solid #1c04f7; /* border for send button */
+  background: #ff00ff; /* send button background */
+  border: 2px solid #ff00f2; /* border for send button */
   color: white;
   padding: 4px 10px;
   font-weight: bold;
@@ -143,4 +151,11 @@ a#exit {
 
 .msgln b.user-name-left {
   background: rgb(211, 48, 20); /* "USER HAS LEFT" Name Box color */
+}
+
+#info {
+  font-family: "Brush Script MT";
+  font-size: 60px;
+  text-align: center;
+  color: forestgreen;
 }
